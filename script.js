@@ -44,9 +44,9 @@ const rollDice = () =>{
     }
     
     setTimeout(() => {
-        const winner = p1_sum > p2_sum ? alert("Player 1 is the winner") :
-        p2_sum > p1_sum ? alert("Player 2 is the winner") :
-        alert('Tie!');
+        const winner = p1_sum > p2_sum ? Swal.fire("Player 1 is winner!") :
+        p2_sum > p1_sum ? Swal.fire("Player 2 is winner!"):
+        Swal.fire("Tie");
     }, 2000);
 
     
