@@ -33,10 +33,14 @@ input{
     text-align: center;
     font-weight: bold;
 }
-#diceResult{
+#diceResult, #diceResult2{
+    color: #fff;
     margin: 25px;
 }
-#diceImages img{
+#diceImages img,#diceImages2 img{
     width: 150px;
     margin: 5px;
+}
+.container p{
+    color: #fff;
 }
