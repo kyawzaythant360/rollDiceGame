@@ -5,9 +5,16 @@ let p2_sum = 0;
 let p1_sum = 0;
 
 const playerOne = () =>{
-    btn.classList.add('disabled');
+    const p1btn = document.getElementById("p1");
     const p2btn = document.getElementById("p2");
-    p2btn.disabled = true;
+    p1btn.addEventListener('click', () => {
+        btn.classList.add('disabled');
+        p2btn.disabled = true;
+        setTimeout(() => {
+          p2btn.disabled = false;
+        }, 5000); 
+      });
+    
     const diceResult = document.querySelector("#diceResult");
     const diceImages1 = document.querySelector("#diceImages"); 
     const P1images = [];
@@ -35,11 +42,15 @@ const playerOne = () =>{
 
 
 const playerTwo = () =>{
-    const p2btn = document.getElementById("p2");
-    p2btn.disabled = false;
-    btn.classList.add('disabled');
     const p1btn = document.getElementById("p1");
-    p1btn.disabled = true;
+    const p2btn = document.getElementById("p2");
+    p2btn.addEventListener('click', () => {
+       
+        p1btn.disabled = true;
+        setTimeout(() => {
+          p1btn.disabled = false;
+        }, 2000); 
+      });
     const diceResult2 = document.querySelector("#diceResult2");
     const diceImages2 = document.querySelector("#diceImages2");
     const P2images = [];
